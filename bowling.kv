@@ -1,0 +1,436 @@
+#kivy 2.1.0
+
+#########################################################################################
+#Title: bowling.kv
+#Author: Douglas T.
+#Creation Date: 03/25/2023
+#Description: The KV language file the Score a Bowling game app.
+#
+#Changelog:
+#Name:          Date:       Change:
+# Douglas T.    03/25/2023  Initial version
+#########################################################################################
+
+<BowlingGame>
+    FloatLayout:
+        size: (root.width, root.height)
+
+        GridLayout:
+            cols: 10
+            rows: 1
+            size_hint: (1, 0.15)
+            pos_hint: {'x':0,'y':.75}
+            spacing: (0.5, 0)
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "1"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "2"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "3"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "4"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "5"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "6"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "7"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "8"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "9"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+            BoxLayout:
+
+                Label:
+                    size_hint: (0.25, 1)
+                    font_size: 30
+                    size: self.texture_size
+                    id: frame1
+                    text: "10"
+                    background_color: (164/255, 165/255, 171/255, 1)
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    color: (0, 0, 0, 1)
+
+        GridLayout:
+            cols: 10
+            rows: 1
+            size_hint: (1, 0.10)
+            pos_hint: {'x':0,'y':.645}
+            spacing: (0.5, 0)
+
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    focus: True
+                    on_text_validate: shot2.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot2
+                    on_text_validate: shot3.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot3
+                    on_text_validate: shot4.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot4
+                    on_text_validate: shot5.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot5
+                    on_text_validate: shot6.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot6
+                    on_text_validate: shot7.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot7
+                    on_text_validate: shot8.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot8
+                    on_text_validate: shot9.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot9
+                    on_text_validate: shot10.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot10
+                    on_text_validate: shot11.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot11
+                    on_text_validate: shot12.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot12
+                    on_text_validate: shot13.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot13
+                    on_text_validate: shot14.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot14
+                    on_text_validate: shot15.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot15
+                    on_text_validate: shot16.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot16
+                    on_text_validate: shot17.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot17
+                    on_text_validate: shot18.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot18
+                    on_text_validate: shot19.focus = True
+            BoxLayout:
+                TextInput:
+                    multiline: False
+                    id: shot19
+                    on_text_validate: shot20.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot20
+                    on_text_validate: shot21.focus = True
+                TextInput:
+                    multiline: False
+                    id: shot21
+
+        GridLayout:
+            cols: 10
+            rows: 1
+            size_hint: (1, 0.10)
+            pos_hint: {'x':0,'y':.54}
+            spacing: (0.5, 0)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+            Label:
+                size_hint: (0.25, 1)
+                font_size: 30
+                size: self.texture_size
+                background_color: (50/255, 61/255, 128/255, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                color: (0, 0, 0, 1)
+
+        Button:
+            text: "RESET"
+            id: reset
+            pos_hint: {'x':0.425,'y':.10}
+            size_hint: (0.15, 0.15)
